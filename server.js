@@ -14,23 +14,23 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-// const db = knex({
-//     client: 'pg',
-//     connection: {
-//         connectionString : process.env.DATABASE_URL,
-//         ssl: true
-//     }
-// });
-
-const db = knex ({
+const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-solid-20564', //localhost (home)
-      user : 'postgres',
-      password : '',
-      database : 'smart-brain'  //database name
+        connectionString : process.env.DATABASE_URL,
+        ssl: true
     }
-  });
+});
+
+// const db = knex ({
+//     client: 'pg',
+//     connection: {
+//       host : 'postgresql-solid-20564', //localhost (home)
+//       user : 'postgres',
+//       password : '',
+//       database : 'smart-brain'  //database name
+//     }
+//   });
 
 // To run express
 const app = express(); 
